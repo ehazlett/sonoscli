@@ -6,7 +6,6 @@ except ImportError:
     from distutils.core import setup
 
 version = '0.1'
-reqs = open('requirements.txt').read().splitlines()
 setup(
     name='sonoscli',
     version=version,
@@ -24,7 +23,15 @@ setup(
             'sonoscli = sonoscli.cli:main',
         ],
     },
-    install_requires = reqs,
+    install_requires = [
+        "argparse>=1.2.1",
+        "clint>=0.3.1",
+        "requests>=2.0.0",
+        "soco>=0.6.0",
+    ],
+    dependency_links = [
+        "https://github.com/SoCo/SoCo/archive/master.zip",
+    ],
     classifiers=[
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
