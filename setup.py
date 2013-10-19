@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import os
-import minion
 try:
     from setuptools import setup
 except ImportError:
